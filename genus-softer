@@ -1,0 +1,75 @@
+getIPaddr = modules.siteName.getIP
+getServer = modules.siteName.getServerName
+modulesList = r"""
+
+            +-----------------------------------------+
+            | [1] -- Получить IP-адресс сервера.      |
+            | [2] -- Получить название сервера.       |
+            +-----------------------------------------+
+
+"""
+# выводим список некоторых команд
+print(r"""
+
+            +-----------------------------------------+
+            | [B] -- Возвращает вас на один шаг назад |
+            | [O] -- Посмотреть возможности           |
+            +-----------------------------------------+
+
+""")
+
+
+# список модулей
+def setModule():  # функция направлена на выбор и использование модулей
+
+    moduleNum = input("[Введите число]: ")
+
+    if moduleNum == "1":
+
+        try:
+            domain = input("[Введите домен]: ")  # запрашиваем у пользователя имя сайта
+            ipSite = getIPaddr(domain)  # отправляем имя нашему модулю
+
+            print("-" * 60)
+            print("[IP] == [{0}]".format(ipSite))
+            print("-" * 60)
+
+        except:
+            print("[Error]: Домен не найден!")
+
+
+    elif moduleNum == "2":
+
+        try:
+            site = input("[Введите домен]: ")
+            url = "http://" + site
+            server = getServer(url)
+
+            print("-" * 60)
+            print("[Server] == [{0}]".format(server))
+            print("-" * 60)
+
+        except:
+            print("[Error]: Домен не найденВ!")
+
+    comand()
+
+
+def comand():  # функция направлена на исполнение выбранной пользователем команды
+
+    comand = input("[$] --> ")
+
+    if comand == "B":
+        exit("Вы успешно вышли")
+    elif comand == "O":
+
+        print(modulesList)
+        print(setModule())
+
+    else:
+
+        print("[Error]: Команда не найдена!")
+        exit("Код остановлен!")
+
+
+print(comand())

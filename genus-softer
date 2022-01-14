@@ -1,4 +1,4 @@
-import siteName  # инициализация нашего модуля
+
 import Dow
 import time
 import sys

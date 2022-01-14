@@ -1,4 +1,4 @@
-import modules.siteName  # инициализация нашего модуля
+import m  # инициализация нашего модуля
 
 import modules.Dow
 

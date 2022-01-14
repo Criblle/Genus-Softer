@@ -1,4 +1,5 @@
-import modules.siteName 
+import modules.siteName  # инициализация нашего модуля
+import modules.Dow
 import time
 import sys
 import os
@@ -99,7 +100,6 @@ print("  `---`     `----'    '---'         `--`----' ")
 
 
 
-
 getIPaddr = modules.siteName.getIP
 getServer = modules.siteName.getServerName
 modulesList = r"""
@@ -143,7 +143,7 @@ def setModule():  # функция направлена на выбор и ис�
     elif moduleNum == "2":
 
         try:
-            site = input("[Введите домен]: ")
+            site = input("[Введите IP-адресс]: ")
             url = "http://" + site
             server = getServer(url)
 
@@ -152,7 +152,7 @@ def setModule():  # функция направлена на выбор и ис�
             print("-" * 60)
 
         except:
-            print("[Error]: Домен не найденВ!")
+            print("[Error]: Адресс не найден!")
 
     comand()
 
@@ -172,5 +172,6 @@ def comand():  # функция направлена на исполнение �
 
         print("[Error]: Команда не найдена!")
         exit("Код остановлен!")
+
 
 print(comand())

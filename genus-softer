@@ -1,5 +1,4 @@
-import modules.siteName  # инициализация нашего модуля
-import modules.Dow
+import siteName  # инициализация нашего модуля
 import time
 import sys
 import os
@@ -100,8 +99,8 @@ print("  `---`     `----'    '---'         `--`----' ")
 
 
 
-getIPaddr = modules.siteName.getIP
-getServer = modules.siteName.getServerName
+getIPaddr = siteName.getIP
+getServer = siteName.getServerName
 modulesList = r"""
 
             +-----------------------------------------+

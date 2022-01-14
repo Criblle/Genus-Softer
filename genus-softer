@@ -1,4 +1,4 @@
-import siteName 
+import modules.siteName 
 import time
 import sys
 import os
@@ -100,8 +100,8 @@ print("  `---`     `----'    '---'         `--`----' ")
 
 
 
-getIPaddr = siteName.getIP
-getServer = siteName.getServerName
+getIPaddr = modules.siteName.getIP
+getServer = modules.siteName.getServerName
 modulesList = r"""
 
             +-----------------------------------------+

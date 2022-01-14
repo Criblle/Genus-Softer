@@ -1,4 +1,4 @@
-import m  # инициализация нашего модуля
+
 
 import modules.Dow
 
